@@ -3,9 +3,14 @@ Version:        1.1
 Release:        1%{?dist}
 Summary:        Simple cross platform GUI for rclone
 
+%global commit0 b86e821f435b957a5a456fcaeb0a2c0f61b3e43a
+%global gittag0 HEAD
+%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
+
 License:        Unlicense
 URL:            https://mmozeiko.github.io/RcloneBrowser
-Source0:        https://github.com/mmozeiko/RcloneBrowser/archive/1.1.tar.gz
+Source0:        https://github.com/mmozeiko/RcloneBrowser/archive/%{version}.tar.gz
+# Source0:  https://github.com/mmozeiko/RcloneBrowser/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake qt5-devel
 
@@ -13,7 +18,8 @@ BuildRequires:  cmake qt5-devel
 Simple cross platform GUI for rclone
 
 %prep
-%autosetup
+%autosetup -n %{name}-%{version}
+# %autosetup -n %{name}-%{commit0}
 
 %build
 %cmake .
