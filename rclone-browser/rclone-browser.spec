@@ -1,16 +1,16 @@
-Name:           rclone-browser
-Version:        1.1
-Release:        1%{?dist}
-Summary:        Simple cross platform GUI for rclone
-
 %global commit0 b86e821f435b957a5a456fcaeb0a2c0f61b3e43a
 %global gittag0 HEAD
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
+%global checkout 20170302git%{shortcommit0}
+
+Name:           rclone-browser
+Version:        1.1
+Release:        1.%{shortcommit0}%{?dist}
+Summary:        Simple cross platform GUI for rclone
 
 License:        Unlicense
 URL:            https://mmozeiko.github.io/RcloneBrowser
-# Source0:        https://github.com/mmozeiko/RcloneBrowser/archive/%{name}-%{version}-9792a8b.tar.gz
-Source0:  https://github.com/mmozeiko/RcloneBrowser/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Source0:  https://github.com/mmozeiko/RcloneBrowser/archive/%{commit0}.tar.gz#/%{name}-%{version}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake qt5-devel
 
