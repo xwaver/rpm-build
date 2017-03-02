@@ -1,5 +1,5 @@
 Name:           rclone-browser
-Version:        1.1
+Version:        1.2
 Release:        1%{?dist}
 Summary:        Simple cross platform GUI for rclone
 
@@ -9,7 +9,7 @@ Summary:        Simple cross platform GUI for rclone
 
 License:        Unlicense
 URL:            https://mmozeiko.github.io/RcloneBrowser
-Source0:        https://github.com/mmozeiko/RcloneBrowser/archive/%{version}.tar.gz
+Source0:        https://github.com/mmozeiko/RcloneBrowser/archive/%{name}-%{version}-9792a8b.tar.gz
 # Source0:  https://github.com/mmozeiko/RcloneBrowser/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  cmake qt5-devel
@@ -37,6 +37,15 @@ ctest -V %{?_smp_mflags}
 %doc add-docs-here
 
 %changelog
+* Thu Mar 02 2017 Isaac Fischer <ifischer@wikia-inc.com>
+- 
+
+* Thu Mar 02 2017 Isaac Fischer <ifischer@wikia-inc.com>
+- 
+
+* Thu Mar 02 2017 Isaac Fischer <xwaver@xwaver.net>
+- 
+
 * Thu Mar 02 2017 Isaac Fischer <ifischer@wikia-inc.com> 1.1-1
 - 
 
