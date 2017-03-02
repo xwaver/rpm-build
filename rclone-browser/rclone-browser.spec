@@ -12,7 +12,7 @@ License:        Unlicense
 URL:            https://mmozeiko.github.io/RcloneBrowser
 Source0:  https://github.com/mmozeiko/RcloneBrowser/archive/%{commit0}.tar.gz#/%{name}-%{version}-%{shortcommit0}.tar.gz
 
-BuildRequires:  cmake qt5-devel
+BuildRequires:  cmake pkgconfig(Qt)
 
 %description
 Simple cross platform GUI for rclone
