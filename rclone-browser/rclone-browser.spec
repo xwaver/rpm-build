@@ -1,5 +1,5 @@
 Name:           rclone-browser
-Version:        1.1
+Version:        1.2
 Release:        1%{?dist}
 Summary:        Simple cross platform GUI for rclone
 
@@ -37,5 +37,8 @@ ctest -V %{?_smp_mflags}
 %doc add-docs-here
 
 %changelog
+* Thu Mar 02 2017 Isaac Fischer <ifischer@wikia-inc.com> 1.2-1
+- new package built with tito
+
 * Thu Mar  2 2017 Isaac Fischer <xwaver@xwaver.net>
 - Initial build
